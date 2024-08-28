@@ -31,3 +31,5 @@ if __name__ == "__main__":
         {"$sort": {"count": -1}},
         {"$limit": 10}
     ])
+    for ip in ips:
+        print(f"\t{ip.get('_id')}: {ip.get('count')}")
